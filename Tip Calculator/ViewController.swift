@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+    
+    
     @IBOutlet weak var billAmountTextField: UITextField!
     @IBOutlet weak var tipAmountLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
@@ -18,6 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tipControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.green], for: UIControl.State.selected)
     }
 
     @IBAction func calculateTip(_ sender: Any) {
